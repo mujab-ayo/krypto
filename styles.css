@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700;900&family=Poppins:wght@500&family=Raleway:wght@200;300;400;500&display=swap');
+
+
+:root {
+    --poppins : 'Poppins', sans-serif;
+    --noto : 'Noto Sans', sans-serif;
+    --deep:  #6d63ff ;
+    --font-color: #9a98ca;
+    --light: #f2f2ff;
+    --bg-one: #cac7fe;
+    --dark: #1e1e1e;
+    --semi-dark: #797676;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--noto);
+}
+
+a{
+    text-decoration: none;
+}
+
+.btn {
+    font-family: var(--noto);
+    color: var(--light);
+    background: var(--deep);
+    font-weight: 600;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+.small-btn {
+    padding: 8px;
+}
+
+.mid-btn {
+    padding: 10px;
+}
+
+.big-btn {
+    padding: 15px 25px;
+}
+
+.trans-btn {
+    background: transparent;
+    color: var(--light);
+    border: 3px var(--deep) solid;
+    padding: 12px 23px;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.img-container{
+    margin-top: 20px;
+    width: 45%;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+}
+
+li a{
+    color: var(--light);
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: 600;
+    margin-right: 30px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    background: var(--bg-one);
+    padding: 15px 30px;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+ 
+nav * {
+    align-self: center;
+}
+
+nav .logo {
+    font-family: var(--poppins);
+    color: var(--deep);
+}
+
+.fa-bars{
+    display: none;
+    font-size: 30px;
+}
+
+
+
+.first-view {
+    background: var(--bg-one);
+    margin-top: 100px;
+}
+
+.first-view .column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.first-view .column h2 {
+    font-size: 40px;
+    color: var(--light);
+    width: 60%;
+    text-align: center;
+    margin: 40px 0 20px;
+}
+
+
+.first-view .column p {
+    width: 65%;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 18px;
+    color: var(--font-color);
+}
+
+.first-view .column .btn-container {
+    margin: 15px;
+}
+
+.first-view .column .btn-container .btn {
+    margin-right: 10px;
+}
+
+.first-view .column .img-container{
+    height: 60vh;
+    text-align: center;
+}
+
+
+
+.second-view {
+    background: var(--light);
+    padding: 30px;
+}
+
+.second-view h2 {
+    font-size: 45px;
+    color: var(--deep);
+    width: 60%;
+    text-align: center;
+    margin: 50px auto;
+}
+
+.second-view .flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.second-view .flex-reverse {
+    flex-direction: row-reverse;
+}
+
+.second-view .flex .content {
+    width: 50%;
+    align-self: center;
+}
+
+.second-view .flex .content h3 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.second-view .flex .content p {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 25px;
+    color: var(--semi-dark);
+    margin-bottom: 20px;
+}
+
+footer {
+    background: var(--deep);
+    color: var(--light);
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 20px;
+}
+
+footer * {
+    align-self: center;
+}
+
+footer .btn {
+    background: var(--light);
+    color: var(--deep);
+}
+
+
+
+
+
+
+
+
+@media(max-width: 765px) {
+
+    h2, h3 {
+        font-size: 65%;
+        width: 100%;
+    }
+
+    .nav-list{
+        position: absolute;
+        flex-direction: column;
+        background: var(--light);
+        width: 350px;
+        right: 100%;
+        top: 100px;
+        height: calc(100vh - 100px);
+        z-index: 100;
+    }
+
+    .active {
+        right: 0;
+    }
+
+    nav ul li {
+        margin-right: auto;
+        padding: 30px 20px;
+    }
+
+    nav ul li a {
+        color: var(--dark);
+    }
+
+    .fa-bars{
+        display: block;
+    }
+
+    .first-view .column p {
+        width: 85%;
+    }
+
+    .first-view .column .btn-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .first-view .column .btn-container .btn {
+        margin-bottom: 10px;
+    }
+
+    .second-view .flex {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .second-view .flex .content {
+        width: 85%;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+
+    footer ul {
+        flex-direction: column;
+        margin: 20px 0;
+    }
+
+    footer ul li {
+        margin: 20px 0;
+    }
+    
+}
